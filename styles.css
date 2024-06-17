@@ -61,6 +61,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
+    flex-wrap: wrap;
 }
 
 .upload-column {
@@ -80,7 +81,10 @@ label {
 
 input[type="file"] {
     display: block;
-    width: 100%;
+    width: 80%;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .options {
@@ -125,4 +129,42 @@ button:hover {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+    aside {
+        background-color: #f9f9f9;
+        width: 80%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        box-shadow: none;
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .upload-section {
+        flex-direction: column;
+    }
+
+    .upload-column {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    input[type="file"] {
+        display: block;
+        width: 60%;
+        padding: 1em;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-left: 100px;
+    }
 }
