@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알약 예측 서비스</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>알약 예측 서비스</h1>
+    </header>
+    <aside>
+        <h2>사용법</h2>
+        <ul>
+            <li>1. 알약의 앞면과 뒷면이 잘 보이도록 사진을 각각 한 장씩 찍습니다.</li>
+            <li>2. 알약의 앞면 사진과 뒷면 사진을 업로드합니다.</li>
+            <li>3. 예측 시작 버튼을 누릅니다.</li>
+        </ul>
+        <h2>주의사항</h2>
+        <ul>
+            <li>1. 가능한 밝은 곳에서 찍어주세요.</li>
+            <li>2. 사진에 알약이 하나만 찍히도록 해주세요.</li>
+            <li>3. 예측한 결과 5개 중에 없다면, 10개 검색 체크 후 다시 버튼을 눌러주세요.</li>
+            <li>4. 전체 검색을 사용하면 시간은 느리지만 더 정확한 결과를 얻을 수 있습니다.</li>
+        </ul>
+    </aside>
+    <main>
+        <div class="upload-section">
+            <div class="upload-column">
+                <label for="front-image">여기에 알약 <b>앞면</b> 사진을 올려주세요.</label>
+                <input type="file" id="front-image" accept="image/*">
+            </div>
+            <div class="upload-column">
+                <label for="back-image">여기에 알약 <b>뒷면</b> 사진을 올려주세요.</label>
+                <input type="file" id="back-image" accept="image/*">
+            </div>
+        </div>
+        <div class="options">
+            <label>
+                <input type="checkbox" id="ten-search"> 10개 검색
+            </label>
+            <label>
+                <input type="checkbox" id="all-search"> 전체 검색
+            </label>
+        </div>
+        <button id="predict-button">예측 시작</button>
+        <div id="results"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
